@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Vithuran Sadagopan/Documents/Unity/HelloAr/HelloAr/Build/Hello_AR_2.apk
+C:/Users/Vithuran Sadagopan/Documents/Unity/HelloAr/HelloAr/Build/Hello_AR_2.1.apk
 SceneListBegin?
 Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity
 SceneListEnd?
