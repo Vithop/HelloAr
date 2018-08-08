@@ -265,9 +265,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonCamera: {fileID: 896679035}
-  TrackedPlanePrefab: {fileID: 1654175882956584, guid: 6a35c744e5010405c847fad90282d2be,
+  TrackedPlanePrefab: {fileID: 1654175882956584, guid: 4fc497e1982490b4887e4f14a1c1ba70,
     type: 2}
-  AndyAndroidPrefab: {fileID: 1539544152721592, guid: 48ad265f338caaf4da3a864816595b22,
+  AndyAndroidPrefab: {fileID: 1379776243195060, guid: 23acc072eb5374040b0636be7332c457,
     type: 2}
   SearchingForPlaneUI: {fileID: 1133631540}
 --- !u!20 &896679035 stripped

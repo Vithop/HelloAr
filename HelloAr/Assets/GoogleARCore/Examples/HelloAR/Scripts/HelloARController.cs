@@ -55,6 +55,8 @@ namespace GoogleARCore.HelloAR
         /// </summary>
         public GameObject SearchingForPlaneUI;
 
+        public int NumberOfObjects;
+
         /// <summary>
         /// A list to hold new planes ARCore began tracking in the current frame. This object is used across
         /// the application to avoid per-frame allocations.
@@ -128,7 +130,7 @@ namespace GoogleARCore.HelloAR
 
             // If the player has not touched the screen, we are done with this update.
             Touch touch;
-            if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began)
+            if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began || NumberOfObjects == 0)
             {
                 return;
             }
@@ -141,7 +143,7 @@ namespace GoogleARCore.HelloAR
             if (Frame.Raycast(touch.position.x, touch.position.y, raycastFilter, out hit))
             {
                 var andyObject = Instantiate(AndyAndroidPrefab, hit.Pose.position, hit.Pose.rotation);
-
+                NumberOfObjects--;
                 // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                 // world evolves.
                 var anchor = hit.Trackable.CreateAnchor(hit.Pose);

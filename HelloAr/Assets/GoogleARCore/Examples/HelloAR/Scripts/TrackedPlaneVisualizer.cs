@@ -64,6 +64,7 @@ namespace GoogleARCore.HelloAR
         private Mesh m_Mesh;
 
         private MeshRenderer m_MeshRenderer;
+        private MeshCollider meshCollider; //VS
 
         /// <summary>
         /// The Unity Awake() method.
@@ -72,6 +73,7 @@ namespace GoogleARCore.HelloAR
         {
             m_Mesh = GetComponent<MeshFilter>().mesh;
             m_MeshRenderer = GetComponent<UnityEngine.MeshRenderer>();
+            meshCollider = GetComponent<MeshCollider>(); //VS
         }
 
         /// <summary>
@@ -203,6 +205,7 @@ namespace GoogleARCore.HelloAR
             m_Mesh.SetVertices(m_MeshVertices);
             m_Mesh.SetIndices(m_MeshIndices.ToArray(), MeshTopology.Triangles, 0);
             m_Mesh.SetColors(m_MeshColors);
+            meshCollider.sharedMesh = m_Mesh; //VS - used for collision detection
         }
 
         private bool _AreVerticesListsEqual(List<Vector3> firstList, List<Vector3> secondList)
